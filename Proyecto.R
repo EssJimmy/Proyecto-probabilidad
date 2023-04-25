@@ -1,6 +1,4 @@
 # Problema 1
-
-# Declaré algunas variables con los datos que daba el problema
   azules = 5
   moradas = 3
   rojas = 4
@@ -39,8 +37,6 @@
   # d)
     quant_85 = qnorm(0.85, 50, sd_norm)
     print(quant_85)
-    # El cuantil 85 se interpreta como que el 85% del área de la curva está
-    # contenido entre ese valor y el límite inferior del soporte de la función
     
   # e)
     norm_30 <- rnorm(30, 50, sd_norm)
@@ -144,7 +140,7 @@
       print(sqrt(var_unif))
     
   # b)
-    print(1 - punif(3, 3.7, 5.8))
+    print(1 - punif(4, 3.7, 5.8))
       
 
 # Problema 7
