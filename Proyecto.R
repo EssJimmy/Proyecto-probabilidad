@@ -85,7 +85,7 @@
  
     
 # Problema 5
-  acum <- pbinom(5, 15, 0.3)
+  acum = pbinom(5, 15, 0.3)
   nums_bin <- rbinom(30, 15, 0.3)
   
   # a)
@@ -112,6 +112,7 @@
 
 # Problema 6
     x <- runif(1000, min = 3.7, max = 5.8)
+    print(x)
     
     # a)
       # Método iterativo
@@ -150,28 +151,20 @@
   lambda = 3.7
       
   # a)
-    print(ppois(3, lambda))
+    print(dpois(6, lambda))
         
   # b)
-    print(1 - ppois(4, lambda))
+    print(ppois(1, lambda))
         
   # c)
-    print(ppois(5, lambda) - ppois(3, lambda))
+    print(1 - ppois(8, lambda))
       
   # d)
-    print(qpois(0.75, lambda))
+    print(qpois(0.9, lambda))
         
   # e)
-    print(rpois(30, lambda))
-        
-  # f)
-    x <- seq(0, 25)
-    y <- dpois(x, lambda)
-    y_2 <- dpois(x, 10)
-    par(mfrow=c(1, 2))
-    plot(x, y)
-    plot(x, y_2)
-        
+    print(rpois(20, lambda))
+
 
 # Problema 8
   p_poi = 0.01
