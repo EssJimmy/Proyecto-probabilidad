@@ -1,4 +1,6 @@
 # Problema 1
+
+# Declaré algunas variables con los datos que daba el problema
   azules = 5
   moradas = 3
   rojas = 4
@@ -15,13 +17,13 @@
   print(p_morada*p2_no_morada)
   
 # Problema 2
-  print(dbinom(4, 12, 0.5))
-  print(pbinom(4, 12, 0.5))
+  print(dbinom(4, 6, 0.5))
+  print(pbinom(4, 6, 0.5))
 
 
 # Problema 3
   sd_norm = sqrt(abs(25))
-  normal <- pnorm(48, 50, sd_norm)
+  normal = pnorm(48, 50, sd_norm)
   
   # a)
     print(normal)
@@ -30,12 +32,12 @@
     print(1 - normal)
     
   # c)
-    normal_45 <- pnorm(45, 50, sd_norm)
-    normal_55 <- pnorm(54, 50, sd_norm)
+    normal_45 = pnorm(44, 50, sd_norm)
+    normal_55 = pnorm(54, 50, sd_norm)
     print(normal_55 - normal_45)
   
   # d)
-    quant_85 <- qnorm(0.85, 50, sd_norm)
+    quant_85 = qnorm(0.85, 50, sd_norm)
     print(quant_85)
     # El cuantil 85 se interpreta como que el 85% del área de la curva está
     # contenido entre ese valor y el límite inferior del soporte de la función
@@ -47,22 +49,25 @@
   # f)
     x <- seq(0, 100)
     y <- dnorm(x, 50, sd_norm)
+    y_20 <- dnorm(x, 20, sqrt(20))
+    par(mfrow=c(1,2))
     plot(x, y)
+    plot(x, y_20)
     
     
 # Problema 4
-  lambda <- 1/6
-  lambda_10 <- 1/10
-  p6_4 <- pexp(4, lambda)
+  lambda = 1/6
+  lambda_10 = 1/10
+  p6_4 = pexp(3, lambda)
   
   # a)
     print(p6_4)
     
   # b)
-    print(1 - p6_4)
+    print(1 - pexp(4, lambda))
 
   # c)
-    print(pexp(6, lambda) - pexp(3, lambda))
+    print(pexp(5, lambda) - p6_4)
     
   # d)
     print(qexp(0.75, lambda))
@@ -71,7 +76,7 @@
     print(rexp(30, lambda))
     
   # f)
-    x <- seq(0, 40, by=0.1)
+    x <- seq(0, 40)
     y <- dexp(x, lambda)
     y_10 <- dexp(x, lambda_10)
     par(mfrow=c(1, 2))
