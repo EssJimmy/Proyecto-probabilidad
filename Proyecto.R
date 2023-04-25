@@ -21,7 +21,7 @@
 
 # Problema 3
   sd_norm = sqrt(abs(25))
-  normal <- pnorm(48, 50, sd)
+  normal <- pnorm(48, 50, sd_norm)
   
   # a)
     print(normal)
@@ -35,18 +35,18 @@
     print(normal_55 - normal_45)
   
   # d)
-    quant_85 <- qnorm(0.85, 50, sd)
+    quant_85 <- qnorm(0.85, 50, sd_norm)
     print(quant_85)
     # El cuantil 85 se interpreta como que el 85% del área de la curva está
     # contenido entre ese valor y el límite inferior del soporte de la función
     
   # e)
-    norm_30 <- rnorm(30, 50, sd)
+    norm_30 <- rnorm(30, 50, sd_norm)
     print(norm_30)
     
   # f)
     x <- seq(0, 100)
-    y <- dnorm(x, 50, sd)
+    y <- dnorm(x, 50, sd_norm)
     plot(x, y)
     
     
@@ -137,8 +137,8 @@
       print(sqrt(var))
       print(sqrt(var_unif))
     
-    # b)
-      print(1 - punif(3, 3.7, 5.8))
+  # b)
+    print(1 - punif(3, 3.7, 5.8))
       
 
 # Problema 7
@@ -170,23 +170,24 @@
 
 # Problema 8
   p_poi = 0.01
-  n = 30
-  x_bin <- seq(0, n)
-  y_bin <- dbinom(x_bin, n, p_poi)
-  lambda_bin = n*p_poi
+  n_poi = 500
+  x_bin <- seq(0, 25)
+  y_bin <- dbinom(x_bin, n_poi, p_poi)
+  lambda_bin = n_poi*p_poi
   y_poi_bin <- dpois(x_bin, lambda_bin)
   
   lambda_norm = 300
-  x_poi <- seq(0,lambda_norm)
+  x_poi <- seq(lambda_norm - 100,lambda_norm + 100)
   y_poi <- dpois(x_poi, lambda_norm)
   sd_lambda_norm = sqrt(lambda_norm)
   y_nor_poi <- dnorm(x_poi, lambda_norm, sd_lambda_norm)
   
-  p_norm = 0.1
-  x_norm <- seq(0, n)
-  y_norm <- dbinom(x_norm, n, p_norm)
-  mean_norm = n*p_norm
-  sd_norm = sqrt((n*p_norm*(1 - p_norm)))
+  p_norm = 0.5
+  n_norm = 200
+  x_norm <- seq(0, n_norm)
+  y_norm <- dbinom(x_norm, n_norm, p_norm)
+  mean_norm = n_norm*p_norm
+  sd_norm = sqrt((n_norm*p_norm*(1 - p_norm)))
   y_norm_bin <- dnorm(x_norm, mean_norm, sd_norm) 
     
   # a)
@@ -200,5 +201,4 @@
   # c)
     plot(x_norm, y_norm, col="blue")
     lines(x_norm, y_norm_bin, col="red")
-    
     
