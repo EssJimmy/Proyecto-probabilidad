@@ -30,8 +30,8 @@
     print(1 - normal)
     
   # c)
-    normal_45 = pnorm(44, 50, sd_norm)
-    normal_55 = pnorm(54, 50, sd_norm)
+    normal_45 = pnorm(45, 50, sd_norm)
+    normal_55 = pnorm(55, 50, sd_norm)
     print(normal_55 - normal_45)
   
   # d)
@@ -54,13 +54,13 @@
 # Problema 4
   lambda = 1/6
   lambda_10 = 1/10
-  p6_4 = pexp(3, lambda)
+  p6_4 = pexp(4, lambda)
   
   # a)
     print(p6_4)
     
   # b)
-    print(1 - pexp(4, lambda))
+    print(1 - p6_4)
 
   # c)
     print(pexp(5, lambda) - p6_4)
