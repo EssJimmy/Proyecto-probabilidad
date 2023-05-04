@@ -63,7 +63,7 @@
     print(1 - p6_4)
 
   # c)
-    print(pexp(5, lambda) - p6_4)
+    print(pexp(6, lambda) - pexp(3, lambda))
     
   # d)
     print(qexp(0.75, lambda))
